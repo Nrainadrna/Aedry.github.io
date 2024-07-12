@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* Global styles */
+body {
+    font-family: 'Tw Cen MT', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2EEDC; /* Home page background color */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 80px; /* Increase the height for a larger logo */
+    padding-left: 50px;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 650px;
+    display: inline-flex;
+    gap: 85px; /* Adjust the gap between navigation items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.social-icons {
+    position: fixed;
+    right: 20px;
+    top: 50%; /* Move the social media icons slightly lower */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-right: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start; /* Align to the start (left) */
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding-left: 180px; /* Add left padding for alignment */
+    padding-top: 20px; /* Space before entering the About page */
+}
+
+.intro {
+    text-align: left;
+}
+
+.intro h1 {
+    font-family: 'Monday Sans', sans-serif;
+    font-size: 40px;
+    color: #A98958;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.mySlides {
+    display: none;
+    text-align: left;
+}
+
+.mySlides .text {
+    font-family: 'Marcellus', serif; /* Change to Marcellus font */
+    font-size: 130px;
+    color: #000000;
+}
+
+.connect-me {
+    text-align: left;
+    margin-top: 20px;
+    padding-top: 5px;
+}
+
+.connect-link {
+    font-family: 'Monday Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #A98958;
+    text-decoration: none;
+    border: 1px solid #A98958;
+    padding: 10px 14px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.connect-link:hover {
+    background-color: #A98958;
+    color: #F2EEDC;
+}
+
+/* Styling for About Me Page */
+.about-me-page {
+    background-color: #D1C0AA;
+    padding: 50px 0;
+}
+
+.about-me-content {
+    max-width: 1200px;
+    margin: auto;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); /* Slide in from bottom */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-me-content.show {
+    opacity: 1; /* Show content */
+    transform: translateY(0); /* Reset transform */
+}
+
+.about-me-item img {
+    width: 100%;
+    display: block;
+    padding-top: 90px; /* Add padding top here */
+    padding-bottom: 50px;
+}
+
+/* Styling for Skills Page */
+.skills-page {
+    background-color: #B0B79F;
+    padding: 50px 0;
+}
+
+.skills-content {
+    max-width: 1200px;
+    margin: auto;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100px); /* Slide in from left */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.skills-content.show {
+    opacity: 1; /* Show content */
+    transform: translateX(0); /* Reset transform */
+}
+
+.skills-item img {
+    width: 90%;
+    display: block;
+    padding-top: 90px; /* Add padding top here */
+    padding-bottom: 50px;
+    padding-left: 40px;
+}
+
+
+/* Animations */
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.portfolio-page {
+    display: flex;
+    flex-direction: column; /* Arrange items downwards */
+    align-items: center; /* Center align items horizontally */
+    width: 100%; /* Allow background color to span full width */
+}
+
+.portfolio-item {
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    padding-bottom: 200px;
+	padding-top: 200px;
+    margin-bottom: -10px; /* Adjust margin to remove gap */
+}
+
+.item1 {
+    background-color: #AAB9BC; /* Background color for item 1 */
+}
+
+.item2 {
+    background-color: #B8AC9D; /* Background color for item 2 */
+}
+
+.item3 {
+    background-color: #D1CBB2; /* Background color for item 3 */
+}
+
+.portfolio-item img {
+    max-width: 50%; /* Make images fill their container */
+    height: auto;
+    display: block;
+    border-radius: 0; /* Remove border radius */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Footer Section */
+footer {
+    background-color: #D1C0AA;
+    padding-top: 80px ;
+	padding-bottom: 80px;
+}
+
+.footer-content {
+    background-color: #F2EEDC;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.song-box {
+    text-align: left;
+}
+
+.song-name {
+	padding-left: 10px;
+}
+
+
+.song-box img {
+    width: 100px; /* Adjusted smaller size */
+    height: 100px; /* Adjusted smaller size */
+    border-radius: 10px;
+	padding-left: 25px;
+}
+
+.vibing-text {
+    font-family: 'Monday Sans', sans-serif;
+    color: #A98958;
+    margin-bottom: 20px;
+	padding-left: 10px;
+}
+
+.footer-text {
+    text-align: center; /* Align text to the left */
+}
+
+.footer-text h1 {
+    font-family: 'Marcellus', sans-serif;
+    color: #A98958;
+    margin-bottom: 50px;
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: #A98958;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #A98958; /* Adding border around "Contact Me" */
+    padding: 8px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-text a:hover {
+    background-color: #A98958;
+    color: #F2EEDC;
+}
+
+.footer-image img {
+    width: 200px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.footer-logo {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 80px;
+}
+
+.footer-copyright {
+    font-size: 17px;
+    color: #988163;
+	text-align: center;
+	margin-top: 2px;
+
+}

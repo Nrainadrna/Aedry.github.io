@@ -1,0 +1,20 @@
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        // About Me Section Animation
+        const aboutMeSection = document.querySelector('.about-me-content');
+        const aboutMePosition = aboutMeSection.getBoundingClientRect().top;
+
+        if (aboutMePosition < window.innerHeight) {
+            aboutMeSection.classList.add('show');
+        }
+
+        // Skills Section Animation
+        const skillsSection = document.querySelector('.skills-content');
+        const skillsPosition = skillsSection.getBoundingClientRect().top;
+
+        if (skillsPosition < window.innerHeight) {
+            skillsSection.classList.add('show');
+        }
+    });
+});
+
